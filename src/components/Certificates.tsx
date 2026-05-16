@@ -3,6 +3,9 @@ import React from 'react'
 const certificates = [
   { title: 'Frontend Developer - Coursera', issuer: 'Coursera', date: '2024', link: '#' },
   { title: 'TypeScript Mastery', issuer: 'Udemy', date: '2023', link: '#' },
+  { title: 'UI/UX Design Professional', issuer: 'Adobe', date: '2024', link: '#' },
+  { title: 'React Development Certification', issuer: 'Meta', date: '2025', link: '#' },
+  { title: 'Responsive Web Design', issuer: 'Google', date: '2023', link: '#' },
 ]
 
 const achievements = [
