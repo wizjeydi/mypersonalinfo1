@@ -8,12 +8,9 @@ export default function Home() {
   return (
     <div className="cv-shell min-h-screen text-slate-200">
       <header className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-gold flex items-center justify-center font-bold text-slate-950 shadow-lg shadow-gold/20">J</div>
-          <div>
-            <div className="text-sm uppercase tracking-[0.32em] text-slate-400">Jensen Omega</div>
-            <div className="font-semibold text-white">Personal Portfolio</div>
-          </div>
+        <div>
+          <div className="text-sm uppercase tracking-[0.32em] text-slate-400">John Dave Botones</div>
+          <div className="text-xl font-semibold text-white">Software Developer</div>
         </div>
 
         <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-300">
@@ -31,7 +28,7 @@ export default function Home() {
               Software Developer
             </div>
             <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl font-black tracking-tight text-white">Hello. <br /> I'm <span className="text-gold">Jensen Omega</span></h1>
+              <h1 className="text-5xl sm:text-6xl font-black tracking-tight text-white">Hello. <br /> I'm <span className="text-gold">John Dave Botones</span></h1>
               <p className="max-w-2xl text-slate-300 leading-relaxed">I build elegant, accessible, and high-performance web experiences for startups and brands. My focus is on modern UI, responsive layouts, and reliable code that scales.</p>
             </div>
 
@@ -61,7 +58,7 @@ export default function Home() {
             <div className="absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-fuchsia-500/20 blur-3xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur-xl">
               <div className="rounded-[1.75rem] overflow-hidden border border-white/10 bg-slate-900">
-                <img src={profile} alt="Jensen Omega" className="h-[420px] w-full object-cover" />
+                <img src={profile} alt="John Dave Botones" className="h-[420px] w-full object-cover" />
               </div>
               <div className="mt-6 rounded-[1.5rem] bg-slate-900/80 p-5 text-center border border-white/10">
                 <p className="text-sm uppercase tracking-[0.3em] text-slate-400">About me</p>

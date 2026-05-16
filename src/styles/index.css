@@ -34,7 +34,10 @@ a { color: inherit; text-decoration: none; }
 .border-gold { border-color: rgba(248, 183, 57, 0.18); }
 
 .cv-shell {
-  background: transparent;
+  background-image: linear-gradient(rgba(1, 5, 14, 0.88), rgba(1, 5, 14, 0.96)), url('https://static.vecteezy.com/system/resources/thumbnails/013/087/516/small/diagonal-golden-line-glass-cube-on-black-background-illustration-of-website-banner-poster-sign-corporate-business-social-media-post-billboard-agency-advertising-media-motion-video-animation-wave-vector.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cv-card {
