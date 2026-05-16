@@ -24,9 +24,6 @@ export default function Projects() {
           <article key={p.title} className="cv-card rounded-[2rem] border border-white/10 p-6 shadow-2xl shadow-slate-950/20 transition hover:-translate-y-1">
             <h3 className="text-xl font-semibold text-white">{p.title}</h3>
             <p className="mt-4 text-slate-400">{p.description}</p>
-            <div className="mt-5">
-              <a href="#" className="text-primary font-semibold hover:underline">View project →</a>
-            </div>
           </article>
         ))}
       </div>
