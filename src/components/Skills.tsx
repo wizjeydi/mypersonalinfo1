@@ -16,7 +16,8 @@ export default function Skills() {
     <section id="skills" className="mt-8">
       <div className="mb-6">
         <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Skills</p>
-        <h2 className="mt-4 text-3xl font-bold text-white">Tools and Technologies</h2>
+        <h2 className="mt-4 text-3xl font-bold text-white">Programming Languages</h2>
+        <p className="mt-3 max-w-2xl text-slate-400">Core languages and technologies I use to build modern web experiences.</p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         {skills.map((s) => (

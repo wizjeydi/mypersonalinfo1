@@ -1,6 +1,7 @@
 import React from 'react'
 import profile from './assets/jeyd.png'
 import Projects from './Projects'
+import Skills from './Skills'
 import Certificates from './Certificates'
 
 export default function Home() {
@@ -103,6 +104,8 @@ export default function Home() {
           </div>
           <Projects />
         </section>
+
+        <Skills />
 
         <Certificates />
 
