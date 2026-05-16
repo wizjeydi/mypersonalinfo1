@@ -1,4 +1,5 @@
 import React from 'react'
+import profile from './assets/jeyd.png'
 import Projects from './Projects'
 import Certificates from './Certificates'
 
@@ -14,7 +15,7 @@ export default function Home() {
       </header>
 
       <main className="max-w-6xl mx-auto px-6 pb-16">
-        <section id="home" className="mt-12">
+        <section id="home" className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center mt-12">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-slate-300 shadow-sm shadow-slate-900/30">
               Software Developer
@@ -41,6 +42,14 @@ export default function Home() {
                 <div className="text-3xl font-bold text-white">10+</div>
                 <p className="mt-3 text-sm text-slate-400">Awards & Recognitions</p>
               </div>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-md">
+            <div className="absolute -left-10 -top-10 h-44 w-44 rounded-full bg-indigo-500/20 blur-3xl" />
+            <div className="absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-fuchsia-500/20 blur-3xl" />
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950 shadow-2xl shadow-slate-950/40">
+              <img src={profile} alt="John Dave Botones" className="h-[420px] w-full object-cover" />
             </div>
           </div>
         </section>
