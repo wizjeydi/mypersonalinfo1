@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from './assets/jd.jpg'
+import profile from './assets/jeydi.jpg'
 import Skills from './Skills'
 import Projects from './Projects'
 import Certificates from './Certificates'
