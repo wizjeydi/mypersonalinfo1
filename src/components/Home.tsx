@@ -104,6 +104,7 @@ export default function Home() {
           <Projects />
         </section>
 
+        <Certificates />
 
         <section id="contact" className="mt-16 cv-card rounded-[2rem] p-10">
           <div className="grid gap-8 md:grid-cols-2 items-center">
