@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1E3A8A;
+  --color-gold: #caa14a;
+  --color-dark: #0f1720;
+}
+
+.text-primary { color: var(--color-primary); }
+.bg-primary { background-color: var(--color-primary); }
+
+.text-gold { color: var(--color-gold); }
+.bg-gold { background-color: var(--color-gold); }
+.border-gold { border-color: rgba(202,161,74,0.16); }
+
+.cv-shell { background: linear-gradient(180deg, #0b0b0b 0%, #0f1720 100%); color: #e6e6e6 }
+.cv-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); }
+.cv-accent { color: var(--color-gold); }
+
+.timeline {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.06);
+}
+.timeline-item { position: relative; padding: 0.5rem 0 1rem 1.5rem; }
+.timeline-item::before { content: ''; position: absolute; left: -0.35rem; top: 0.5rem; width: 12px; height: 12px; border-radius: 9999px; background: var(--color-gold); border: 2px solid rgba(0,0,0,0.3); }
+
+@media print {
+  .no-print { display: none }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+.animate-fadeUp { animation: fadeUp 600ms ease both; }
+.animate-floatY { animation: floatY 4s ease-in-out infinite; }
+
+/* Profile blob */
+.blob-svg { width: 100%; height: 100%; display: block; }
+.blob-wrap { width: 18rem; height: 18rem; position: relative; }
+.blob-shadow { filter: drop-shadow(0 20px 40px rgba(2,6,23,0.6)); }
+
+/* Profile circle */
+.profile-circle { width: 18rem; height: 18rem; border-radius: 9999px; background: #fff; overflow: hidden; display: block; border: 1px solid rgba(2,6,23,0.06); }
+.profile-circle img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Material icons tweaks */
+.material-icons { display: inline-block; font-size: 24px; line-height: 1; vertical-align: middle; }
+
+.cv-card:hover { transform: translateY(-6px); transition: transform 220ms ease; }
+
