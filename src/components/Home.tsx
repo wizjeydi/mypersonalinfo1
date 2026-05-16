@@ -3,71 +3,152 @@ import profile from './assets/jd.jpg'
 import Skills from './Skills'
 import Projects from './Projects'
 import Certificates from './Certificates'
-import usePaletteFromImage from '../hooks/usePaletteFromImage'
 
 export default function Home() {
-  usePaletteFromImage(profile)
   return (
-    <div className="cv-shell min-h-screen">
-      <header className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div className="cv-shell min-h-screen text-slate-200">
+      <header className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-gold flex items-center justify-center font-bold text-black">J</div>
-          <div className="text-gold font-semibold">John Dave Botones</div>
+          <div className="w-10 h-10 rounded-2xl bg-gold flex items-center justify-center font-bold text-slate-950 shadow-lg shadow-gold/20">J</div>
+          <div>
+            <div className="text-sm uppercase tracking-[0.32em] text-slate-400">Jensen Omega</div>
+            <div className="font-semibold text-white">Personal Portfolio</div>
+          </div>
         </div>
-        <nav className="space-x-6 text-sm text-slate-300 hidden md:block">
+
+        <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-300">
+          <a href="#home" className="hover:text-white">Home</a>
           <a href="#about" className="hover:text-white">About</a>
-          <a href="#projects" className="hover:text-white">Portfolio</a>
-          <a href="#skills" className="hover:text-white">Skills</a>
+          <a href="#projects" className="hover:text-white">Projects</a>
+          <a href="#contact" className="hover:text-white">Contact</a>
         </nav>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 py-10">
-        <section className="grid md:grid-cols-2 gap-8 items-center cv-card p-8 rounded-lg animate-fadeUp">
+      <main className="max-w-6xl mx-auto px-6 pb-16">
+        <section id="home" className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center mt-12">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-slate-300 shadow-sm shadow-slate-900/30">
+              Software Developer
+            </div>
+            <div className="space-y-4">
+              <h1 className="text-5xl sm:text-6xl font-black tracking-tight text-white">Hello. <br /> I'm <span className="text-gold">Jensen Omega</span></h1>
+              <p className="max-w-2xl text-slate-300 leading-relaxed">I build elegant, accessible, and high-performance web experiences for startups and brands. My focus is on modern UI, responsive layouts, and reliable code that scales.</p>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-gold/20 transition hover:-translate-y-0.5">Get a proposal</a>
+              <a href="#projects" className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-gold hover:text-white">View portfolio</a>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="cv-card rounded-3xl p-6 text-center">
+                <div className="text-3xl font-bold text-white">120+</div>
+                <p className="mt-3 text-sm text-slate-400">Projects Completed</p>
+              </div>
+              <div className="cv-card rounded-3xl p-6 text-center">
+                <div className="text-3xl font-bold text-white">95%</div>
+                <p className="mt-3 text-sm text-slate-400">Client Satisfaction</p>
+              </div>
+              <div className="cv-card rounded-3xl p-6 text-center">
+                <div className="text-3xl font-bold text-white">10+</div>
+                <p className="mt-3 text-sm text-slate-400">Awards & Recognitions</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-md">
+            <div className="absolute -left-10 -top-10 h-44 w-44 rounded-full bg-indigo-500/20 blur-3xl" />
+            <div className="absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-fuchsia-500/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur-xl">
+              <div className="rounded-[1.75rem] overflow-hidden border border-white/10 bg-slate-900">
+                <img src={profile} alt="Jensen Omega" className="h-[420px] w-full object-cover" />
+              </div>
+              <div className="mt-6 rounded-[1.5rem] bg-slate-900/80 p-5 text-center border border-white/10">
+                <p className="text-sm uppercase tracking-[0.3em] text-slate-400">About me</p>
+                <h2 className="mt-4 text-2xl font-semibold text-white">John Dave Botones</h2>
+                <p className="mt-3 text-sm leading-6 text-slate-400">BSIT majoring in Business Analytics, focused on web development, product experiences, and clean UI design.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="mt-16 grid gap-8 lg:grid-cols-[0.95fr_0.85fr]">
+          <div className="cv-card rounded-[2rem] p-8">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm uppercase tracking-[0.28em] text-slate-400">About me</p>
+                <h2 className="mt-4 text-3xl font-bold text-white">A developer who builds meaningful digital experiences.</h2>
+              </div>
+              <span className="inline-flex rounded-full bg-white/5 px-4 py-2 text-sm text-slate-200">Based in Batangas, Philippines</span>
+            </div>
+            <p className="mt-6 text-slate-300 leading-7">I design and develop modern websites with performance, accessibility, and responsive user interfaces in mind. My approach combines strong technical foundations with thoughtful interactions and a polished visual style.</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-3xl font-bold text-gold">4+</p>
+                <p className="mt-2 text-sm text-slate-400">Years of experience</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-3xl font-bold text-gold">30+</p>
+                <p className="mt-2 text-sm text-slate-400">Happy clients</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="cv-card rounded-[2rem] p-6">
+              <p className="text-sm uppercase tracking-[0.28em] text-slate-400">What I do</p>
+              <h3 className="mt-4 text-xl font-semibold text-white">Web Development</h3>
+              <p className="mt-3 text-slate-300">Building responsive, accessible, and fast web apps using React, TypeScript, and modern tooling.</p>
+            </div>
+            <div className="cv-card rounded-[2rem] p-6">
+              <p className="text-sm uppercase tracking-[0.28em] text-slate-400">Design</p>
+              <h3 className="mt-4 text-xl font-semibold text-white">UI / UX Design</h3>
+              <p className="mt-3 text-slate-300">Crafting polished interfaces with consistent spacing, hierarchy, and visual clarity.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" className="mt-16">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Portfolio</p>
+              <h2 className="mt-4 text-3xl font-bold text-white">Latest projects</h2>
+            </div>
+          </div>
+          <Projects />
+        </section>
+
+        <section id="skills" className="mt-16">
           <div>
-            <p className="text-sm text-slate-400">Digital Agency & Personal Portfolio Template</p>
-            <h1 className="text-4xl sm:text-5xl font-extrabold mt-2">I'M <span className="text-gold">John Dave Botones</span></h1>
-            <p className="mt-4 text-slate-300">Frontend Developer & IT graduate (Business Analytics). I build modern web applications using TypeScript, React and Tailwind CSS.</p>
-            <div className="mt-6 flex gap-4">
-              <a href="#projects" className="inline-block bg-gold text-black px-5 py-3 rounded-md font-medium">View Work</a>
-              <a href="#certificates" className="inline-block border border-slate-700 text-slate-300 px-5 py-3 rounded-md">Resume</a>
+            <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Skills</p>
+            <h2 className="mt-4 text-3xl font-bold text-white">Tools and technologies</h2>
+          </div>
+          <Skills />
+        </section>
+
+        <section id="contact" className="mt-16 cv-card rounded-[2rem] p-10">
+          <div className="grid gap-8 md:grid-cols-2 items-center">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Contact</p>
+              <h2 className="mt-4 text-3xl font-bold text-white">Ready to build something great?</h2>
+              <p className="mt-4 text-slate-300 leading-7">Let’s collaborate on your next product, website, or app. I’m available for freelance and full-time opportunities.</p>
+            </div>
+            <div className="space-y-4">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-sm text-slate-400">Email</p>
+                <p className="mt-2 text-white">johndave@example.com</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-sm text-slate-400">Phone</p>
+                <p className="mt-2 text-white">+63 912 345 6789</p>
+              </div>
             </div>
           </div>
-
-          <div className="flex justify-center md:justify-end">
-            <div className="profile-circle bg-white rounded-full overflow-hidden w-64 h-64 border border-slate-200 flex items-center justify-center shadow-lg">
-              <img src={profile} alt="John Dave Botones" className="w-full h-full object-cover" />
-            </div>
-          </div>
         </section>
-
-        <section id="about" className="mt-10 cv-card p-6 rounded-lg">
-          <h2 className="text-2xl font-bold">About</h2>
-          <p className="mt-3 text-slate-300">I'm John Dave Botones, a Bachelor of Science in Information Technology majoring in Business Analytics (2026). I focus on building accessible, performant, and delightful user experiences. Based in Wawa, Nasugbu, Batangas.</p>
-        </section>
-
-        <section id="projects" className="mt-8">
-          <h2 className="text-2xl font-bold">Portfolio</h2>
-          <div className="mt-4">
-            <Projects />
-          </div>
-        </section>
-
-        <section id="skills" className="mt-8">
-          <h2 className="text-2xl font-bold">My Skills</h2>
-          <div className="mt-4">
-            <Skills />
-          </div>
-        </section>
-
-        <section id="certificates" className="mt-8">
-          <Certificates />
-        </section>
-
-        {/* Contact section removed */}
       </main>
 
-      <footer className="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500">
-        © {new Date().getFullYear()} John Dave Botones — Built with TypeScript & Tailwind CSS.
+      <footer className="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} John Dave Botones — Built with React, Tailwind CSS.
       </footer>
     </div>
   )

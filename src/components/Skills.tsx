@@ -13,13 +13,12 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="mt-12">
-      <h2 className="text-2xl font-bold">Skills</h2>
-      <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <section id="skills" className="mt-8">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         {skills.map((s) => (
-          <div key={s.name} className="cv-card p-4 rounded-lg flex flex-col items-center justify-center text-center hover:scale-[1.02] transition-transform">
-            <span className="material-icons text-gold text-3xl mb-2">{s.icon}</span>
-            <div className="font-medium text-sm">{s.name}</div>
+          <div key={s.name} className="cv-card rounded-[1.75rem] p-5 text-center border border-white/10 hover:-translate-y-1 transition-transform">
+            <span className="material-icons text-gold text-4xl mb-4">{s.icon}</span>
+            <div className="font-semibold text-white">{s.name}</div>
           </div>
         ))}
       </div>

@@ -15,30 +15,30 @@ export default function Certificates() {
     <section id="certificates" className="mt-12">
       <h2 className="text-2xl font-bold">Certificates & Achievements</h2>
       <div className="mt-4 grid gap-6 sm:grid-cols-2">
-        <div>
-          <h3 className="font-semibold">Certificates</h3>
-          <ul className="mt-2 space-y-2">
+        <div className="cv-card rounded-[2rem] border border-white/10 p-6">
+          <p className="text-sm uppercase tracking-[0.26em] text-slate-400">Certificates</p>
+          <ul className="mt-4 space-y-4">
             {certificates.map((c) => (
-              <li key={c.title} className="p-4 border rounded-md bg-white">
-                <div className="flex items-center justify-between">
+              <li key={c.title} className="rounded-3xl border border-white/10 bg-slate-950/70 p-4">
+                <div className="flex items-start justify-between gap-4">
                   <div>
-                    <div className="font-medium">{c.title}</div>
-                    <div className="text-sm text-slate-500">{c.issuer} • {c.date}</div>
+                    <div className="font-semibold text-white">{c.title}</div>
+                    <div className="mt-1 text-sm text-slate-500">{c.issuer} • {c.date}</div>
                   </div>
-                  <a href={c.link} className="text-primary hover:underline text-sm">View</a>
+                  <a href={c.link} className="text-primary font-semibold">View</a>
                 </div>
               </li>
             ))}
           </ul>
         </div>
-        <div>
-          <h3 className="font-semibold">Achievements</h3>
-          <ul className="mt-2 space-y-2">
+        <div className="cv-card rounded-[2rem] border border-white/10 p-6">
+          <p className="text-sm uppercase tracking-[0.26em] text-slate-400">Achievements</p>
+          <ul className="mt-4 space-y-4">
             {achievements.map((a) => (
-              <li key={a.title} className="p-4 border rounded-md bg-white">
-                <div className="font-medium">{a.title}</div>
+              <li key={a.title} className="rounded-3xl border border-white/10 bg-slate-950/70 p-4">
+                <div className="font-semibold text-white">{a.title}</div>
                 <div className="text-sm text-slate-500 mt-1">{a.date}</div>
-                <div className="text-sm text-slate-600 mt-2">{a.desc}</div>
+                <p className="text-slate-400 mt-3 text-sm">{a.desc}</p>
               </li>
             ))}
           </ul>
