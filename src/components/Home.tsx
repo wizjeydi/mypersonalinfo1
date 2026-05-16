@@ -1,6 +1,5 @@
 import React from 'react'
-import profile from './assets/jeydi.jpg'
-import Skills from './Skills'
+import profile from './assets/jd.jpg'
 import Projects from './Projects'
 import Certificates from './Certificates'
 
@@ -28,7 +27,6 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-4">
               <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-gold/20 transition hover:-translate-y-0.5">Get a proposal</a>
-              <a href="#projects" className="inline-flex items-center justify-center rounded-full border border-slate-700 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-gold hover:text-white">View portfolio</a>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
@@ -50,15 +48,8 @@ export default function Home() {
           <div className="relative mx-auto w-full max-w-md">
             <div className="absolute -left-10 -top-10 h-44 w-44 rounded-full bg-indigo-500/20 blur-3xl" />
             <div className="absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-fuchsia-500/20 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur-xl">
-              <div className="rounded-[1.75rem] overflow-hidden border border-white/10 bg-slate-900">
-                <img src={profile} alt="John Dave Botones" className="h-[420px] w-full object-cover" />
-              </div>
-              <div className="mt-6 rounded-[1.5rem] bg-slate-900/80 p-5 text-center border border-white/10">
-                <p className="text-sm uppercase tracking-[0.3em] text-slate-400">About me</p>
-                <h2 className="mt-4 text-2xl font-semibold text-white">John Dave Botones</h2>
-                <p className="mt-3 text-sm leading-6 text-slate-400">BSIT majoring in Business Analytics, focused on web development, product experiences, and clean UI design.</p>
-              </div>
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950 shadow-2xl shadow-slate-950/40">
+              <img src={profile} alt="John Dave Botones" className="h-[420px] w-full object-cover" />
             </div>
           </div>
         </section>
@@ -113,13 +104,6 @@ export default function Home() {
           <Projects />
         </section>
 
-        <section id="skills" className="mt-16">
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Skills</p>
-            <h2 className="mt-4 text-3xl font-bold text-white">Tools and technologies</h2>
-          </div>
-          <Skills />
-        </section>
 
         <section id="contact" className="mt-16 cv-card rounded-[2rem] p-10">
           <div className="grid gap-8 md:grid-cols-2 items-center">
