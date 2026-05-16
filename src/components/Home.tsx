@@ -106,12 +106,20 @@ export default function Home() {
                 <p className="mt-2 text-white">+63 967 573 5409</p>
               </div>
               <div className="flex flex-wrap items-center gap-4">
-                <a href="https://www.facebook.com/jayydii.botones.7" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 hover:bg-white/10">
-                  <span className="material-icons text-gold">facebook</span>
+                <a href="https://www.facebook.com/jayydii.botones.7" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 hover:bg-white/10">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-950/80 text-gold">
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+                      <path d="M22 12.073C22 6.507 17.523 2 12 2S2 6.507 2 12.073c0 4.991 3.657 9.124 8.438 9.931v-7.03H7.898v-2.901h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.901h-2.33v7.03C18.343 21.197 22 17.064 22 12.073Z" />
+                    </svg>
+                  </span>
                   Facebook
                 </a>
-                <a href="https://www.instagram.com/botonesjd.b/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 hover:bg-white/10">
-                  <span className="material-icons text-gold">instagram</span>
+                <a href="https://www.instagram.com/botonesjd.b/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 hover:bg-white/10">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-950/80 text-gold">
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+                      <path d="M7.75 2C4.678 2 2.25 4.428 2.25 7.5v9C2.25 19.572 4.678 22 7.75 22h8.5c3.072 0 5.5-2.428 5.5-5.5v-9C21.75 4.428 19.322 2 16.25 2h-8.5Zm8.25 2.5c.69 0 1.25.56 1.25 1.25S16.69 7 16 7s-1.25-.56-1.25-1.25S15.31 4.5 16 4.5Zm-4.25 1.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5Zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5Z" />
+                    </svg>
+                  </span>
                   Instagram
                 </a>
               </div>
