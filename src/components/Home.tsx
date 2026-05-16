@@ -26,29 +26,9 @@ export default function Home() {
               <p className="max-w-2xl text-slate-300 leading-relaxed">A developer who builds meaningful digital experiences, always driven by a passion for continuous learning and technical growth.</p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-gold/20 transition hover:-translate-y-0.5">Get a proposal</a>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="cv-card rounded-3xl p-6 text-center">
-                <div className="text-3xl font-bold text-white">120+</div>
-                <p className="mt-3 text-sm text-slate-400">Projects Completed</p>
-              </div>
-              <div className="cv-card rounded-3xl p-6 text-center">
-                <div className="text-3xl font-bold text-white">95%</div>
-                <p className="mt-3 text-sm text-slate-400">Client Satisfaction</p>
-              </div>
-              <div className="cv-card rounded-3xl p-6 text-center">
-                <div className="text-3xl font-bold text-white">10+</div>
-                <p className="mt-3 text-sm text-slate-400">Awards & Recognitions</p>
-              </div>
-            </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-xl">
-            <div className="absolute -left-12 -top-12 h-52 w-52 rounded-full bg-indigo-500/20 blur-3xl" />
-            <div className="absolute -right-12 bottom-6 h-32 w-32 rounded-full bg-fuchsia-500/20 blur-3xl" />
             <div className="overflow-hidden rounded-[2rem] shadow-2xl shadow-slate-950/40">
               <img src={profile} alt="John Dave Botones" className="h-[520px] w-full object-cover" />
             </div>
