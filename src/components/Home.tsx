@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import profile from './assets/jeyd.png'
 import Projects from './Projects'
 import Skills from './Skills'
 import Certificates from './Certificates'
 
 export default function Home() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleContactSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
+    const subject = encodeURIComponent(`Website message from ${name || 'visitor'}`)
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
+    window.location.href = `mailto:botonesjd@gmail.com?subject=${subject}&body=${body}`
+  }
+
   return (
     <div className="cv-shell min-h-screen text-slate-200">
       <header className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
@@ -90,28 +101,50 @@ export default function Home() {
         <Certificates />
 
         <section id="contact" className="mt-16 cv-card rounded-[2rem] p-10">
-          <div className="grid gap-8 md:grid-cols-2 items-center">
+          <div className="grid gap-8 md:grid-cols-2 items-start">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Contact</p>
-              <h2 className="mt-4 text-3xl font-bold text-white">Ready to build something great?</h2>
-              <p className="mt-4 text-slate-300 leading-7">Let’s collaborate on your next product, website, or app. I’m available for freelance and full-time opportunities.</p>
+              <h2 className="mt-4 text-3xl font-bold text-white">Send a message</h2>
+              <p className="mt-4 text-slate-300 leading-7">Use the form to create a quick message. It will open your email client so you can send it directly to my inbox.</p>
             </div>
-            <div className="space-y-4">
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <p className="text-sm text-slate-400">Email</p>
-                <p className="mt-2 text-white">botonesjd@gmail.com</p>
+            <form onSubmit={handleContactSubmit} className="space-y-4 rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+              <div className="grid gap-4">
+                <input
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  className="w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white placeholder:text-slate-500"
+                  placeholder="Your name"
+                  type="text"
+                  required
+                />
+                <input
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  className="w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white placeholder:text-slate-500"
+                  placeholder="Your email"
+                  type="email"
+                  required
+                />
+                <textarea
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
+                  className="w-full rounded-3xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white placeholder:text-slate-500"
+                  placeholder="Write your message"
+                  rows={6}
+                  required
+                />
               </div>
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <p className="text-sm text-slate-400">Phone</p>
-                <p className="mt-2 text-white">+63 967 573 5409</p>
-              </div>
-            </div>
+              <button type="submit" className="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5">
+                Send message
+              </button>
+              <p className="text-sm text-slate-400">This will open your email client so you can send the message directly to botonesjd@gmail.com.</p>
+            </form>
           </div>
         </section>
       </main>
 
       <footer className="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} John Dave Botones — Built with React, Tailwind CSS.
+        © {new Date().getFullYear()} John Dave Botones.
       </footer>
     </div>
   )
