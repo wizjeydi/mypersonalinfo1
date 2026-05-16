@@ -105,6 +105,16 @@ export default function Home() {
                 <p className="text-sm text-slate-400">Phone</p>
                 <p className="mt-2 text-white">+63 967 573 5409</p>
               </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <a href="https://www.facebook.com/jayydii.botones.7" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 hover:bg-white/10">
+                  <span className="material-icons text-gold">facebook</span>
+                  Facebook
+                </a>
+                <a href="https://www.instagram.com/botonesjd.b/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200 hover:bg-white/10">
+                  <span className="material-icons text-gold">instagram</span>
+                  Instagram
+                </a>
+              </div>
             </div>
           </div>
         </section>
