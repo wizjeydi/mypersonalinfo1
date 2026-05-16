@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import profile from './assets/jeyd.png'
 import Projects from './Projects'
 import Skills from './Skills'
 import Certificates from './Certificates'
 
 export default function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.15 }
+    )
+
+    document.querySelectorAll('.scroll-fade').forEach((element) => {
+      observer.observe(element)
+    })
+
+    return () => {
+      document.querySelectorAll('.scroll-fade').forEach((element) => {
+        observer.unobserve(element)
+      })
+    }
+  }, [])
   return (
     <div className="cv-shell min-h-screen text-slate-200">
       <header className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
@@ -16,7 +38,7 @@ export default function Home() {
       </header>
 
       <main className="max-w-6xl mx-auto px-6 pb-16">
-        <section id="home" className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center mt-12">
+        <section id="home" className="scroll-fade grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center mt-12">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.28em] text-slate-300 shadow-sm shadow-slate-900/30">
               Software Developer
@@ -35,7 +57,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="mt-16 grid gap-8 lg:grid-cols-[0.95fr_0.85fr]">
+        <section id="about" className="scroll-fade mt-16 grid gap-8 lg:grid-cols-[0.95fr_0.85fr]">
           <div className="cv-card rounded-[2rem] p-8">
             <div className="flex items-center justify-between gap-4">
               <div>
@@ -75,7 +97,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="mt-16">
+        <section id="projects" className="scroll-fade mt-16">
           <div className="flex items-center justify-between gap-4">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Portfolio</p>
@@ -89,7 +111,7 @@ export default function Home() {
 
         <Certificates />
 
-        <section id="contact" className="mt-16 cv-card rounded-[2rem] p-10">
+        <section id="contact" className="scroll-fade mt-16 cv-card rounded-[2rem] p-10">
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Contact</p>

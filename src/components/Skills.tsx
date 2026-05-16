@@ -13,7 +13,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="mt-8">
+    <section id="skills" className="scroll-fade mt-8">
       <div className="mb-6">
         <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Skills</p>
         <h2 className="mt-4 text-3xl font-bold text-white">Programming Languages</h2>

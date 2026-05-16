@@ -14,7 +14,7 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="mt-12">
+    <section id="certificates" className="scroll-fade mt-12">
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="text-sm uppercase tracking-[0.26em] text-slate-400">Certificates</p>
