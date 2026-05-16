@@ -13,12 +13,6 @@ export default function Home() {
           <div className="text-xl font-semibold text-white">Software Developer</div>
         </div>
 
-        <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-300">
-          <a href="#home" className="hover:text-white">Home</a>
-          <a href="#about" className="hover:text-white">About</a>
-          <a href="#projects" className="hover:text-white">Projects</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
-        </nav>
       </header>
 
       <main className="max-w-6xl mx-auto px-6 pb-16">
