@@ -14,6 +14,10 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="mt-8">
+      <div className="mb-6">
+        <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Skills</p>
+        <h2 className="mt-4 text-3xl font-bold text-white">Tools and Technologies</h2>
+      </div>
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
         {skills.map((s) => (
           <div key={s.name} className="cv-card rounded-[1.75rem] p-5 text-center border border-white/10 hover:-translate-y-1 transition-transform">
