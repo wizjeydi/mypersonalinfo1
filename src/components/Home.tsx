@@ -48,7 +48,7 @@ export default function Home() {
           <div className="relative mx-auto w-full max-w-md">
             <div className="absolute -left-10 -top-10 h-44 w-44 rounded-full bg-indigo-500/20 blur-3xl" />
             <div className="absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-fuchsia-500/20 blur-3xl" />
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950 shadow-2xl shadow-slate-950/40">
+            <div className="overflow-hidden rounded-[1.5rem] shadow-2xl shadow-slate-950/40">
               <img src={profile} alt="John Dave Botones" className="h-[420px] w-full object-cover" />
             </div>
           </div>
